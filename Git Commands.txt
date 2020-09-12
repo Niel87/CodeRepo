@@ -1,0 +1,12 @@
+1. git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/JJTECHDEMOREPO
+2. git status
+3. git config -- local user.name "Niel"
+4. git config -- local user email limbe1987@gmail.com
+5. git add .
+6. git commit -m "Added cat.txt and dog.txt"
+7. git push -u origin master ------if you are in branch or git push -------------------if you are in master acct
+8. git checkout -b master
+9. git branch
+10.git push
+  
+  

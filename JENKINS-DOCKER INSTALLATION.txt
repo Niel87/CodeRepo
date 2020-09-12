@@ -1,0 +1,39 @@
+1.sudo yum update -y
+
+2.yum install java-1.8* -y
+
+3.java -version
+
+4.sudo amazon-linux-extras install docker -y
+
+5.service docker start
+
+6.service docker status=========---------- ma
+
+7.usermod -a -G docker ec2-user----------adds EC2 user to docker group
+
+8.docker network create jenkins
+
+Creates Volumes
+9.docker volume create jenkins-docker-certs
+
+10.docker volume create jenkins-data
+
+11.docker container run --name jenkins-docker --rm --detach \
+  --privileged --network jenkins --network-alias docker \
+  --env DOCKER_TLS_CERTDIR=/certs \
+  --volume jenkins-docker-certs:/certs/client \
+  --volume jenkins-data:/var/jenkins_home \
+  --volume "$HOME":/home docker:dind
+docker network create jenkins
+
+docker container run --name jenkins-tutorial --rm --detach \
+  --network jenkins --env DOCKER_HOST=tcp://docker:2376 \
+  --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 \
+  --volume jenkins-data:/var/jenkins_home \
+  --volume jenkins-docker-certs:/certs/client:ro \
+  --volume "$HOME":/home \
+  --publish 8080:8080 jenkinsci/blueocean
+
+
+

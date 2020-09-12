@@ -1,0 +1,30 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "",
+    "Metadata": {
+
+    },
+    "Parameters": {
+
+    },
+    "Mappings": {
+
+    },
+    "Conditions": {
+
+    },
+    "Resources": {"nell": {
+       "Type": "AWS::IAM::User",
+       "Properties": {
+          "Path": "JJTech/ken",
+          "Groups": [ "JJTech" ],
+          "LoginProfile": { "Password" : "sammy01" },
+          "Policies": []
+       }
+    }
+
+    },
+    "Outputs": {
+
+    }
+}

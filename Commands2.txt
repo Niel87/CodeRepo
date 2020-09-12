@@ -1,0 +1,38 @@
+sudo -i#!bin/bash
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+yum install unzip -y
+yum install unzip -y
+sudo yum install -y https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm
+sudo systemctl enable amazon-ssm-agent
+sudo systemctl start amazon-ssm-agent
+
+
+
+#!/bin/bash
+yum update -y
+yum install httpd -y
+chkconfig httpd on
+service httpd start
+cd /var/www/html
+echo "<html><h1>Hello JJTECH Friends! This is the X Web Server</h1></html>" > index.html[7/2, 9:20 PM] Mousa AWS: webserver_Oregon.sh
+
+#!/bin/bash
+yum update -y
+yum install httpd -y
+chkconfig httpd on
+service httpd start
+cd /var/www/html
+echo "<html><h1>Hello JJTECHInc Friends! This is the Y Web Server</h1></html>" > index.html 
+
+
+
+/dev/xvdc        49G   53M   47G   1% /home/ec2-user/JJTECH
+sudo pvcreate /dev/xvdd /dev/xvdb /dev/xvde DEV REFER TO EBS VOLUMES
+sudo vgcreate JJTECHVG /dev/xvdd /dev/xvdb /dev/xvde
+sudo vgcreate JJTECHVG /dev/xvdd /dev/xvde /dev/xvdb
+vgdisplay
+sudo vgdisplay
+sudo vgs
+sudo lvcreate -L +50G -n JJTECHLV JJTECHVG
+From Watson Marin to Everyone: (6:13 PM)
+sudo lvcreate -L +50G -n JJTECHLV JJTECHVG

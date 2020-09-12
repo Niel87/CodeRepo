@@ -1,0 +1,75 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "",
+    "Metadata": {
+
+    },
+    "Parameters": {
+      "NielVPCA": {
+        "Description": "Provides AZs to SN",
+        "Type": "AWS::EC2::AvailabilityZone::Name"
+    },
+    "NielVPCB": {
+        "Description": "Provides AZs to SN",
+        "Type": "AWS::EC2::AvailabilityZone::Name"
+    },
+    "NielSNPub": {
+        "Description": "Provides cidr to VPC",
+        "Type": "Sting"
+    },
+    "NielSNPriv": {
+        "Description": "Provide cidr to VPC",
+        "Type": "String"
+    }
+
+    },
+    "Mappings": {
+
+    },
+    "Conditions": {
+
+    },
+    "Resources": {"NielVPC": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "NielVPCA",
+        "Tags": [{ "Key": "Name", "Value":  "NielVPC" }]
+      }
+    },
+    "NielIGW": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [{ "Key": "Name", "Value":  "NielIGW" }]
+      }
+    },
+    "NielIGWA": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": { "Ref": "NielVPC" },
+        "InternetGatewayId": { "Ref": "NielIGW" }
+      }
+    },
+    "NielSNPub": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "AvailabilityZone": "us-east-1a",
+        "VpcId": "NielVPC",
+        "CidrBlock":"NielSNPub",
+        "Tags": [{ "Key": "Name", "Value":  "NielSNPub" }]
+      }
+    },
+    "NielSNPri": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "AvailabilityZone": "us-east-1b",
+        "VpcId": { "Ref": "NielVPC" },
+        "CidrBlock": { "Ref": "NielSNPriv" },
+        "Tags": [{ "Key": "Name", "Value":  "NielSNPri" }]
+      }
+    }
+
+    },
+    "Outputs": {
+
+    }
+}
