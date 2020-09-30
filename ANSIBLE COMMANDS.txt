@@ -1,0 +1,65 @@
+sudo vi /etc/ssh/sshd_config
+
+sudo vi /etc/sudoers
+
+systemctl restart sshd
+
+sudo yum install epel-release -y
+
+sudo yum install ansible -y
+
+sudo vi /etc/ansible/ 
+
+vi hosts
+
+ssh ansible@masterIp
+
+su ansible ----------------- ansible user
+
+ssh-keygen -t rsa
+
+cd /home/ansible
+
+cd .ssh
+
+ssh-copy-id ansible@clientIp
+  
+ansible webservers -m ping
+ 
+ansible webservers -b -m yum -a "name=ntp state=latest”
+
+ansible webservers -b -m user -a "name=Niel state=present”
+
+ansible webservers -b -m group -a "name=group1 state=present”
+
+https://jjtech-trainings.s3-us-west-2.amazonaws.com/ansible-tower/httpd.yml
+
+
+
+- name: sample playbook
+  hosts: all
+  become: true
+  tasks:
+    - name: install httpd
+      yum:
+          name: httpd
+          state: latest
+
+    - name: run httpd
+      service:
+              name: httpd
+              state: started
+
+    - name: create content
+      copy:
+        content: "GM! Hello from JJTech"
+        dest: /var/www/html/index.html
+
+ sudo vi apache.yml
+
+ansible-playbook apache.yml
+
+ansible --list-hosts all
+
+
+   
