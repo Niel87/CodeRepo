@@ -1,0 +1,25 @@
+sudo yum update -y
+
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
+
+sudo dnf install ansible –y
+
+yum install wget -y
+
+wget https://releases.ansible.com/ansible-tower/setup/ansible-tower-setup-latest.tar.gz
+
+tar xvzf ansible-tower-setup-latest.tar.gz
+
+cd ansible-tower-setup-3.7.2-1
+
+vi inventory-----------------and give same password for admin password and pg_password
+
+./setup.sh
+
+copy pub ip and paste on browser
+
+click on advance
+
+click on proceed to ip unsafe
+
+put admin for user name and password you added in inventory file
