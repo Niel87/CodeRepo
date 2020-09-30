@@ -1,0 +1,2 @@
+01:42:15	Avinash Mamidi:	https://aws.amazon.com/tools/
+01:43:05	Avinash Mamidi:	Boto3: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html

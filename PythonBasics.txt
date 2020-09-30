@@ -1,0 +1,56 @@
+if a>10:
+    print("greater")
+elif a<10:
+    print("smaller")
+elif a==10:
+    print("equal")
+else:
+    print("normal")
+
+Avinash Mamidi:	a= ["JJtech","Session",5,"python",1,2,3]
+
+for temp in a:
+    if temp == "python" or temp == "Session" or temp == 5:
+        continue
+    elif temp == 1:
+        break
+    print(temp)
+
+Avinash Mamidi:	a= ["JJtech","Session",5,"python",1,2,"Jjtech",3,"bsdhjbv","jsebdvkjbs",44]
+
+for temp in a:
+    if temp == "python" or temp == "Session" or temp == 5:
+        continue
+    elif temp == 3:
+        break
+    print(temp)
+
+Avinash Mamidi:	basket= ["apple","orange","carrot","pineapple","guava","strawberry","apple","carrot","beetroot","lemon","mango"]
+
+for hand in basket:
+    if hand == "carrot" or hand == "beetroot":
+        continue
+    if hand == "lemon":
+        break
+    print(hand)
+
+Avinash Mamidi:	def addition(var1,var2):
+    var3 = var1 * var2
+    print(var3)
+
+
+addition(5,3)
+
+addition(7,9)
+
+addition(45,32)
+
+Avinash Mamidi:	import random
+basket = ["apple","orange","banana"]
+print(random.choice(basket))
+
+
+import datetime
+time = datetime.datetime.now()
+print(time)
+02:44:08	
