@@ -1,10 +1,10 @@
 1.sudo yum update -y
 
-2.yum install java-1.8* -y
+2.sudo yum install java-1.8* -y
 
 3.java -version
 
-4.sudo amazon-linux-extras install docker -y
+4.sudo amazon-linux-extras install docker -y-----  sudo yum install docker 
 
 5.service docker start
 
@@ -34,6 +34,8 @@ docker container run --name jenkins-tutorial --rm --detach \
   --volume jenkins-docker-certs:/certs/client:ro \
   --volume "$HOME":/home \
   --publish 8080:8080 jenkinsci/blueocean
+
+docker logs jenkins-tutorial
 
 
 
