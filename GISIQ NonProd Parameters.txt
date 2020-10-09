@@ -1,0 +1,7 @@
+Jespo Aws E Mbwoge: To create: aws cloudformation create-stack --stack-name FB-Test2 --template-body file://Compute-FE.json --parameters file://Compute-FE-Para.json
+
+Jespo Aws E Mbwoge: To delete: aws cloudformation delete-stack --stack-name FB-Test2
+
+To describe: aws cloudformation describe-stack --stack-name FB-Test2
+
+To validate: aws cloudformation validate-template --template-body file://Compute-FE.json
