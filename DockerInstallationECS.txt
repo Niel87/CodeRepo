@@ -1,0 +1,41 @@
+Docker Installation
+
+
+1.sudo yum update -y
+
+2.sudo amazon-linux-extras install docker -y  -----  sudo yum install docker 
+
+3.service docker start
+
+4.service docker status
+
+5.docker run hello-world
+
+6.docker ps------------ checking for dockerprocessess
+
+7.docker run -dit alpine sh   --------- Pull docker image, run, desplay container image id once done running
+
+8.docker attach container ID  ---------- take you inside of container
+
+9.cat /etc/os-release ----------- shows you OS of container
+
+10.apk update --------update and add packages
+
+11.apk add git -------- add github
+
+12. Ctrl + P + q --------------- exit Container
+
+13. docker commit -m "Added Git" Container ID Niel/alpine-git  ------Create new Image in Container
+
+14.docker images Source_Image[:TAG] TARGET_IMAGE[:TAG] 
+docker tag niel/alpine-git:latest niel/alpine-git:1.0 ----------------- Change Tag image 
+
+15. docker login ------------ provide docker hub
+
+16.docker push 
+
+
+Build Docker Image From Scratch.
+
+1.
+
