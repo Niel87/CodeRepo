@@ -1,0 +1,41 @@
+DISK MANAGEMENT
+
+lsblk ------------------- list volume
+
+cd dev ------------------------ find device
+
+cd /mnt -------------- cd to mount point
+
+mkdir Directory Name ----------------- create Driectory to mount Volume
+
+mkfs -t ext4 /dev/volume ------- make file system (ext4) in device
+
+mount /dev/volume /mnt/directory name(mount point) ----- mount volume to directory 
+
+mount -a or df / df -h / lsblk -------------- see if volume was mounted
+
+• pvcreate /dev/xvdd /dev/xvdb /dev/xvde ----------------
+
+Create a volume group: sudo vgcreate JJTECHVG /dev/xvdd /dev/xvde /dev/xvdb --------------
+
+Create Logical Volume: sudo lvcreate -L +50G -n JJTECHLV JJTECHVG ------------
+
+sudo mkfs -t ext4 /dev/JJTECHVG/JJTECHLV -------------------
+
+
+mkfs -t ext4 /dev/JJTECHVG/JJTECHLG
+
+mount /dev/JJTECHVG/JJTECHLG JJTECH20 ..................... cd to mnt to run
+
+cd to etc
+
+vi fstab ............. modify file to be persistent(keep changes when instance is stopped)
+
+
+
+xvdg                202:96   0  45G  0 disk
+└─JJTECHVG-JJTECHLG 253:0    0  50G  0 lvm  /mnt/JJTECH20
+xvdh                202:112  0  30G  0 disk
+└─JJTECHVG-JJTECHLG 253:0    0  50G  0 lvm  /mnt/JJTECH20
+
+
