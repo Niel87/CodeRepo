@@ -1,0 +1,38 @@
+1.sudo yum update -y
+
+2.sudo amazon-linux-extras install docker -y
+
+3.sudo service docker start
+
+4.sudo service docker status
+
+5.sudo docker run hello-world (It just runs and exit that's why when you do docker images you don't see anything)
+
+6.sudo docker ps (Checking for docker running processes)
+
+7.sudo docker run -dit alpine sh (This command pulls a docker image from DockerHub and execute (Pull and Run))
+
+8.sudo docker ps (When you run this command you see the docker Image and Container ID)
+9.sudo docker pill "image name" (Optional)
+10.sudo docker run -dit alpine sh
+11.sudo docker ps (You should )
+
+--Create an account on DockerHub https://hub.docker.com/ --
+sudo docker attach "Contaner id" (It takes you directly to the container) 
+
+--Once you get into the container--
+cat /etc/os-release (shows you the OS Version of the container)
+ls (this shows you the files and directories that are under the Root of this container)
+
+--Update and Add some Packages--
+apk update (This command updates the OS of this Container)
+apk add git (This helps you install Git in this Contaner)
+Ctrl+P+Q or do Exit (This command enables you to Exit the Container)
+
+--Now you are out of the Contaner (Create a New Image from this Container before pushing it to DockerHub)--
+sudo docker commit -m "Added GIT" ff0 jespo/alpine-git (Run this to Create a Docker Image from the container you just update)
+sudo docker images (Shows you the number of images you have and the image you just created)
+sudo docker tag jespo/alpine-git:latest jespo/alpine-git:1.0 [{SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG] }]
+sudo docker images
+sudo docker login (You have to be logged into your docker hub in other to push that image to your Account)
+sudo docker push "docker image and tag (new image name and tag)" (This will push the image to your Docker Hub)

@@ -10,6 +10,8 @@ wget https://releases.ansible.com/ansible-tower/setup/ansible-tower-setup-latest
 
 tar xvzf ansible-tower-setup-latest.tar.gz
 
+ 
+
 cd ansible-tower-setup-3.7.2-1
 
 vi inventory-----------------and give same password for admin password and pg_password

@@ -35,6 +35,8 @@ docker tag niel/alpine-git:latest niel/alpine-git:1.0 ----------------- Change T
 16.docker push 
 
 
+
+
 Build Docker Image From Scratch.
 
 1.
