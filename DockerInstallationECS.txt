@@ -3,7 +3,7 @@ Docker Installation
 
 1.sudo yum update -y
 
-2.sudo amazon-linux-extras install docker -y  -----  sudo yum install docker 
+2.  -----  sudo yum install docker 
 
 3.service docker start
 
@@ -38,6 +38,45 @@ docker tag niel/alpine-git:latest niel/alpine-git:1.0 ----------------- Change T
 
 
 Build Docker Image From Scratch.
+Vi Dockerfile----------------- paste content 
 
-1.
+*FROM ubuntu:12.04
+
+MAINTAINER jjtech
+
+RUN apt-get update && apt-get install -y apache2 && apt-get clean && rm -r /var/lib/apt/lists/*
+
+ENV APACHE_RUN_USER www-data
+
+ENV APACHE_RUN_GROUP www-data
+
+ENV APACHE_LOG_DIR /var/log/apache2
+
+EXPOSE 80
+
+CMD ["/usr/sbin/apache2","-D","FOREGROUND"]*		 
+
+
+docker build -t jjtechin1/image2 .
+
+docker tag jespo/alpine-git:latest jjtechinc1/alpine-git:1.0
+
+docker tag local repository(sdfsdfd/asdfsdfs:latest) dockerhub account (ashdfd/adfsdf:2.0)
+	
+aws ecr create-repository --repository-name nginx
+	
+docker pull nginx
+	
+docker tag nginx:latest aws_account_id.dkr.ecr.us-east-1.amazonaws.com/nginx:latest
+	
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com/nginx
+	
+	
+
+
+docker push aws_account_id.dkr.ecr.us-east-1.amazonaws.com/nginx:latest
+
+aws ecr get-login-password | docker login --username AWS --password-stdin
+
+aws ecr describe-repositories
 
