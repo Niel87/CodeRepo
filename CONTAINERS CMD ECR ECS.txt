@@ -1,0 +1,79 @@
+-open your local machine
+-documents
+-src
+-create a new folder.
+-go to your gitbash
+-cd to documents/src/mkdir ecs-ecr-docker
+-cd ec2-ecr-dockers
+-go to your repository
+-go to code
+-copy your url and take it to your gitbash and clone without pushing
+-cd to ecs-ecr-dockers
+-do ls to see all th file. 
+
+to save the file in s3 
+-create a new s3 bucket
+-go to upload, create a new folder
+- go to upload and upload the files from your local
+- by doing addfiles
+- back to your local to upload.
+
+on your ec2-instant
+sudo yum update -y
+sudo amazon-linux-extras install docker -y
+sudo service docker start
+sudo service docker status
+
+FROM ubuntu:12.04
+
+MAINTAINER jjtech
+
+RUN apt-get update && apt-get install -y apache2 && apt-get clean && rm -r /var/lib/apt/lists/*
+
+ENV APACHE_RUN_USER www-data
+
+ENV APACHE_RUN_GROUP www-data
+
+ENV APACHE_LOG_DIR /var/log/apache2
+
+EXPOSE 80
+
+CMD ["/usr/sbin/apache2","-D","FOREGROUND"]
+
+ vi Dockerfile
+sudo docker build -t jeannel-2 .
+sudo ps
+sudo docker images
+
+-go to the console
+-go to ecr (elastic container registry)
+-create a repository
+-give it a name
+-create 
+-click on view command push
+-click on macs/linux and take it to your terminate
+1-4 commands
+
+
+ECS
+-Ecs clusters
+-task
+-task definition is like a meter data that carriers that tells ecs how to run docker containers.
+
+ Ecs has three manior components
+
+-ecs is for compute
+-ecs cluster and task or service and task 
+definition
+The task definition is to defind the port, the memory & cpu, networking,the enviroment variables and is pass as a default if your present enviroment doesn't support it
+
+Task
+The task give detail regarding the application you want to run
+
+advantages
+-it enables you to control your users
+-you can also pull images from ecr by just giving ecs access to ecr.
+the two capabilities are
+-EC2
+-FARGATE
+ecs gives you that ability not to stress so much.
