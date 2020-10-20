@@ -55,13 +55,12 @@ sudo docker images
 -click on view command push
 -click on macs/linux and take it to your terminate
 1-4 commands
-(A): aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 518279615506.dkr.ecr.us-east-1.amazonaws.com
+(A): aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin (AWS REPO)
 
 (B): docker build -t erc-coommand 
 
-(C): docker tag erc-coommand:latest 518279615506.dkr.ecr.us-east-1.amazonaws.com/erc-coommand:latest
-
-(D): docker push 518279615506.dkr.ecr.us-east-1.amazonaws.com/erc-coommand:latest
+(C): docker tag erc-coommand:latest (AWS REPO)
+(D): docker push (AWS REPO)
 
 
 
