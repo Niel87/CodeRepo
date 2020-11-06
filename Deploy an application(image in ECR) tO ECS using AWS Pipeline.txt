@@ -1,0 +1,21 @@
+Deploy an application(image in ECR) tO ECS using AWS Pipeline
+
+Prerequist
+A. create a role for EC2
+B. create ec2 linux
+C. set up docker in EC2 Instance
+D. setup AWS CLI in local machine
+-------------------------------------------------------------------------------------------------------
+1. create an image and push it to ECR
+2. create taskdef.yaml and appspec.json and push it to code commit
+3. create Application load balancer and target groups
+4. create a ECS cluster and service
+5. create Code Deploy Application and Deployment Group
+6. create AWS Pipeline
+7. make change to the AWS Piple and verify the deployment
+
+aws ecs register-task-definition --cli-input-json file://taskdesk.json --region us-west-2
+
+
+------------------------------------------------------------------------------------------------------
+
