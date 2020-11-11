@@ -1,14 +1,14 @@
-sudo yum update -y
+sudo yum update -y.............................. ANSIBLE MUST BE DONE ON REDHAT SERVERS
 
-sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y .......................INSTALL PACKAGE MANAGER dnf
 
-sudo dnf install ansible –y
+sudo dnf install ansible –y...........................PACKAGE MANAGER INSTALL ANSIBLE
 
-yum install wget -y
+yum install wget -y ................................ wget SOFTWARE PACKAGE FOR RETRIEVING FILES
 
-wget https://releases.ansible.com/ansible-tower/setup/ansible-tower-setup-latest.tar.gz
+wget https://releases.ansible.com/ansible-tower/setup/ansible-tower-setup-latest.tar.gz .................................
 
-tar xvzf ansible-tower-setup-latest.tar.gz
+tar xvzf ansible-tower-setup-latest.tar.gz...........tar (COLLECT SOFTWARE FILES INTO ONE)
 
  
 
