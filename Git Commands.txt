@@ -1,12 +1,12 @@
-1. git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/JJTECHDEMOREPO
-2. git status
-3. git config -- local user.name "Niel"
-4. git config -- local user email limbe1987@gmail.com
-5. git add .
-6. git commit -m "Added cat.txt and dog.txt"
-7. git push -u origin master ------if you are in branch or git push -------------------if you are in master acct
-8. git checkout -b master
-9. git branch
-10.git push
-  
+1. git clone ................ Clone repo from github
+2. git add .  ................  add changes from local repo 
+2. git status ................  Check status of repo
+3. git config -- local user.name "Niel" .............. Connect to you github repo from local repo 
+4. git config -- local user email limbe1987@gmail.com ........... Configure youremail
+5. git commit -m "file change" ....... add changes from your local repo to github
+6. git push -u origin master ------if you are in branch or git push -------------------if you are in master acct
+7. git checkout -b master .................. create new branch
+8. git branch ............................. list all branches
+9. git push   ................... push all changes to your github repo
+10.git push --set-upstream origin ......push change from your local to master 
   
